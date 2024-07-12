@@ -1,0 +1,151 @@
+.faq {
+    padding: 3.6vw;
+    max-width: 1200px; /* Define a largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção na página */
+    
+    &__ass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 32px;
+
+        &__form {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+
+            input {
+                flex: 1;
+                padding: 16px;
+                font-size: 1vw;
+                border: none;
+                border-radius: 4px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border: #fff solid 1px;
+                color: #fff;
+                margin-right: 8px;
+
+                &::placeholder {
+                    color: #ffffff;
+                    transition: color 0.1s ease;
+                }
+
+                &:focus {
+                    border: #fff solid 2px;
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+
+            button {
+                font-weight: bold;
+                padding: 16px 48px;
+                font-size: 1.1vw;
+                background-color: #e50914;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #f40612;
+                }
+            }
+        }
+
+        p {
+            color: #FFF;
+            margin-top: 32px;
+            margin-bottom: 16px;   
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__questions {
+        list-style: none;
+        padding: 0; /* Remove o padding da lista */
+        &__item {
+            background-color: #2B2730;
+            margin-bottom: 16px;
+            border-radius: 8px; /* Adiciona borda arredondada */
+
+            &:hover {
+                background-color: #3A3541;
+            }
+            
+            &__question {
+                position: relative;
+                color: #fff;
+                font-size: 20px;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                }
+            }
+
+            &__answer {
+                max-height: 0;
+                overflow: hidden;
+                padding: 0 24px;
+                transition: max-height 0.5s ease, padding 0.5s ease;
+            }
+
+            &--is-open {
+                .faq__questions__item__question::after {
+                    content: '-';
+                }
+
+                .faq__questions__item__answer {
+                    max-height: 500px; /* Ajuste para garantir que a altura máxima seja suficiente */
+                    padding-bottom: 24px;
+                    transition: max-height 0.5s ease, padding 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .faq__ass__form {
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            margin-right: 0;
+            margin-bottom: 16px;
+            max-width: 100%;
+            font-size: 4vw; /* Ajuste o tamanho do texto conforme necessário */
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 4vw; /* Ajuste o tamanho do texto conforme necessário */
+            max-width: 100%;
+        }
+    }
+
+    .faq__ass__title {
+        font-size: 4vw; /* Ajuste o tamanho do texto conforme necessário */
+    }
+
+    .faq__questions__item__question {
+        font-size: 4vw; /* Ajuste o tamanho do texto conforme necessário */
+    }
+}

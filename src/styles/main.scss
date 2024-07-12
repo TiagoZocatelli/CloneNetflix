@@ -1,0 +1,178 @@
+@use 'variaveis';
+@use 'hero';
+@use 'shows';
+@use 'plans';
+@use 'available-devices';
+@use 'faq';
+@use 'footer';
+@use 'header';
+@use 'promo';
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+    height: 100vh;
+}
+
+.back {
+    position: relative; // Necessário para o pseudo-elemento
+    background-image: url(../../src/images/fundo_netflix.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); // Ajuste a opacidade conforme necessário
+        z-index: 1; // Certifique-se de que a sobreposição fique atrás do conteúdo
+    }
+
+    // Adicionando um z-index ao conteúdo direto para garantir que fique acima da sobreposição
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundaria;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$corTextoSecundaria;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+
+    @media (max-width: 768px) {
+        @include title(32px)
+    }
+}
+
+.title--small {
+    @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title((16px))
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    color: variaveis.$corTextoSecundaria;
+    background-color: variaveis.$corBotaoDeFundoPrimario;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid variaveis.$corBotaoDeFundoPrimario;
+
+    
+    &:hover {
+        background-color: lighten(variaveis.$corBotaoDeFundoPrimario, 3%);
+    }
+
+    &--secondary {
+        background-color: #e50914;
+        border-color: #000;
+
+        &:hover {
+            background-color: lighten(#f40612, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corBotaoDeFundoDark,0.8);
+        border-color: variaveis.$corTextoSecundaria;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundaria;
+            color: variaveis.$corDeFundo;
+        }
+    }
+}
+
+.image-text-section {
+    padding: 3.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    &--reverse {
+        grid-template-columns: 1fr 1fr;
+        & > img {
+            order: 2;
+        }
+        &__text_container {
+            order: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    &__text_container {
+        padding: 2vw;
+
+        h2 {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.bord {
+    border-bottom: 8px solid rgba(255, 255, 255, 0.1); // Cor branca com opacidade ajustável
+    margin-top: 20px; // Espaçamento antes da borda
+}

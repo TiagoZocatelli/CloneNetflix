@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Netflix</title>
+    <link rel="shortcut icon" href="./src/images/sim_netflix.png" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="back">
+        <header class="header header--is-hidden">
+            <div class="header__container">
+                <h1>
+                    <img class="header__logo" src="./src/images/Netflix_Logo_RGB.png" alt="Disney+">
+                </h1>
+                <ul class="header__links">
+                    <li class="header__links__item">
+                        <a class="button button--secondary" href="">Assine agora</a>
+                    </li>
+                    <li class="header__links__item">
+                        <a class="button button--dark" href="">Entrar</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__content__title">Filmes, séries e muito mais, sem limites</h1>
+                <p class="hero__content__description">Assista onde quiser. Cancele quando quiser.</p>
+                <p class="hero__content__description">Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                <div class="hero__content__form">
+                    <div class="hero__content__form__contact">
+                        <input type="email" placeholder="Email">
+                        <button>Vamos lá</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="promo">
+        <div class="promo__content">
+            <img class="promo__icon" src="/src/images/sim_netflix.png" alt="Promo Icon">
+            <div class="promo__text">
+                <p>A Netflix que você adora por apenas R$ 20,90.</p>
+                <p>Assine o plano Padrão com anúncios.</p>
+                <a class="promo__link" href="#">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-text-section image-text-section--reverse image-text-section--mgtop" data-aos="fade-right">
+        <img src="./src/images/tv.png" alt="">
+        <div class="image-text-section__text_container">
+            <h2 class="title">Aproveite na TV</h2>
+            <p class="text--big">
+                Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.
+            </p>
+        </div>
+    </section>
+    <div class="bord"></div>
+    <section class="image-text-section"data-aos="fade-left">
+        <img src="./src/images/device-pile.png" alt="">
+        <div class="image-text-section--image-full-width__text_container">
+            <h2 class="title">Assista onde quiser</h2>
+            <p class="text--big">
+                Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.
+            </p>
+        </div>
+    </section>
+    <div class="bord"></div>
+    <section class="image-text-section image-text-section--reverse" data-aos="fade-right">
+        <img src="./src/images/infa.png" alt="">
+        <div class="image-text-section--image-full-width__text_container">
+            <h2 class="title">Crie perfis para crianças</h2>
+            <p class="text--big">
+                Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.
+            </p>
+        </div>
+    </section>
+    <div class="bord"></div>
+    <section class="image-text-section"data-aos="fade-left">
+        <img src="./src/images/mobile-0819.jpg" alt="">
+        <div class="image-text-section--image-full-width__text_container">
+            <h2 class="title">Baixe séries para assistir offline</h2>
+            <p class="text--big">
+                Assista em um avião, trem ou submarino...
+            </p>
+        </div>
+    </section>
+    <div class="bord"></div>
+    <section class="available-devices">
+        <h2 class="title">Disponível nos seus dispositivos favoritos</h2>
+        <ul class="available-devices__list">
+            <li class="available-devices__list__item">
+                <img src="./src/images/dispositivos/computador.png" alt="Computador">
+                <h4 class="title--small">Computador</h4>
+                <ul class="text">
+                    <li>Windows</li>
+                    <li>MacOS</li>
+                    <li>Linux</li>
+                </ul>
+            </li>
+            <li class="available-devices__list__item">
+                <img src="./src/images/dispositivos/tv.png" alt="TV">
+                <h4 class="title--small">TV</h4>
+                <ul class="text">
+                    <li>Smart TVs</li>
+                    <li>Apple TV</li>
+                    <li>Android TV</li>
+                </ul>
+            </li>
+            <li class="available-devices__list__item">
+                <img src="./src/images/dispositivos/videogames.png" alt="Videogames">
+                <h4 class="title--small">Videogames</h4>
+                <ul class="text">
+                    <li>PlayStation</li>
+                    <li>Xbox</li>
+                    <li>Nintendo Switch</li>
+                </ul>
+            </li>
+            <li class="available-devices__list__item">
+                <img src="./src/images/dispositivos/celular.png" alt="Celulares e tablets">
+                <h4 class="title--small">Celulares e tablets</h4>
+                <ul class="text">
+                    <li>iOS</li>
+                    <li>Android</li>
+                    <li>Windows Phone</li>
+                </ul>
+            </li>
+        </ul>
+    </section>    
+    <section class="faq">
+        <h2 class="title">Perguntas frequentes</h2>
+        <ul class="faq__questions">
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Oque é Netflix ?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A Netflix é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet.
+                    Você pode assistir a quantos filmes e séries quiser, quando e onde quiser – tudo por um preço mensal acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Quanto custa a Netflix ?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$ 20,90 a R$ 59,90 por mês. Sem contrato nem taxas extras.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Onde posso assistir ?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    Assista onde quiser, quando quiser. Acesse sua conta Netflix em netflix.com para assistir no computador ou em qualquer aparelho conectado à internet compatível com o aplicativo Netflix, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.
+                    Você também pode baixar suas séries favoritas com o aplicativo Netflix para iOS ou Android. Use os downloads para levar a Netflix para onde quiser sem precisar de conexão com a internet. Leve a Netflix com você para qualquer lugar.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Como faço para cancelar ?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Oque eu posso assistir na Netflix ?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito mais. Assista o quanto quiser, quando quiser.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Netflix é adequada para crianças ?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos responsáveis.
+                    O recurso de controle parental, incluso nos perfis para crianças e protegido por PIN, permite restringir a classificação etária do conteúdo que as crianças podem ver e bloquear títulos específicos que você não quer que elas assistam.
+                </div>
+            </li>
+        </ul>
+        <div class="faq__ass">
+            <p class="faq__ass__title"> 
+                Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.
+            </p>
+            <div class="faq__ass__form">
+                <input type="email" placeholder="Email">
+                <button>Vamos lá</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <div class="language-selector">
+                        <img src="./src/images/icones/globe.svg" alt="">
+                        <select>
+                            <option>English</option>
+                            <option selected>Portugues</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Termos e condicoes de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Politica de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Protecao de dados no Brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Anúncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Dispositiveis compativeis</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Ajuda</a>
+                </li>
+                <li class="footer__links__item">
+                    <a class="text--small" href="">Sobre a Netflix</a>
+                </li>
+            </ul>
+            <p class="text--small">
+                © 2024 Netflix Brasil.
+            </p>
+        </div>
+    </footer>
+    <script src="./dist/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+
+</html>

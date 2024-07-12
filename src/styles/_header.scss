@@ -1,0 +1,54 @@
+@use 'variaveis';
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; // Garantir que o header esteja acima de outros elementos
+
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; // Alinhar itens verticalmente
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 8px;
+        }
+    }
+
+    &__logo {
+        max-width: 200px;
+        width: 100%;
+        margin: 5px;
+        margin-left: 110px;
+        align-items: center;
+        margin-top: 16px;
+
+        @media (max-width: 767px) {
+            margin-left: 0;
+            align-items: center;
+            margin-top: 16px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center; // Alinhar itens verticalmente
+
+        @media (max-width: 767px) {
+            width: 60%;
+            display: flex;
+            margin-left: 16px;
+        }
+        &__item {
+            margin: 5px;
+        }
+    }
+
+    button {
+        height: 50px;
+    }
+}

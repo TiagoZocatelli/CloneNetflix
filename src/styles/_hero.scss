@@ -1,0 +1,182 @@
+@use 'variaveis';
+
+.hero {
+    position: relative; // Necessário para o pseudo-elemento ::before
+    padding: 3.6vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    z-index: 1; // Certifique-se de que o conteúdo fique acima da sobreposição
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+        padding: 7.6vw;
+    }
+
+    @media (max-width: 1280px) {
+        padding: 7.6vw;
+    }
+
+    &__content {
+        position: relative; // Necessário para garantir que o conteúdo fique acima da sobreposição
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 800px; // Limitar a largura máxima para uma melhor responsividade
+        margin-top: 48px;
+
+        &__title {
+            color: #fff;
+            font-size: 2.8vw;
+            white-space: nowrap; // Impede a quebra de linha em telas maiores
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+
+        &__description {
+            color: #fff;
+            margin-top: 16px;
+            font-size: 1.2vw;
+            text-align: center;
+        }
+
+        &__form {
+            display: block;
+            margin-top: 24px;
+            width: 100%;
+            max-width: 600px; // Certifique-se de que o contêiner do formulário não seja muito largo
+            text-align: center;
+
+            &__description {
+                color: #fff;
+                margin-bottom: 16px;
+                font-size: 1vw;
+            }
+
+            &__contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 16px;
+                width: 100%;
+
+                input {
+                    margin-right: 8px;
+                    padding: 16px;
+                    font-size: 1vw;
+                    border: none;
+                    border-radius: 4px;
+                    flex: 1; // Ajuste para garantir que o input ocupe o espaço disponível
+                    max-width: 70%; // Limita a largura do input
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: #fff solid 1px;
+                    color: #fff;
+                
+                    &::placeholder {
+                        color: #ffffff;
+                        transition: color 0.1s ease; // Adiciona transição para a cor do placeholder
+                    }
+                
+                    &:focus {
+                        border: #fff solid 2px; // Aumenta a borda ao focar
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); // Adiciona sombra ao focar
+                        &::placeholder {
+                            color: rgba(255, 255, 255, 0.7); // Torna a cor do placeholder um pouco mais clara ao focar
+                        }
+                    }
+                }
+                
+                
+                
+                
+
+                button {
+                    font-weight: bold;
+                    padding: 16px 48px;
+                    font-size: 1.1vw;
+                    background-color: #e50914;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    flex: none; // Garante que o botão não cresça além do necessário
+                    width: auto;
+                    max-width: 30%; // Limita a largura do botão
+
+                    &:hover {
+                        background-color: #f40612;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__content {
+            &__title {
+                font-size: 5vw;
+                white-space: normal; // Permite que o texto quebre em várias linhas
+            }
+
+            &__description {
+                font-size: 2.5vw;
+            }
+
+            &__form {
+                &__description {
+                    font-size: 3vw;
+                }
+
+                &__contact {
+                    flex-direction: column; // Alinha o input e o botão verticalmente em telas menores
+                    input, button {
+                        font-size: 3.5vw;
+                        padding: 12px;
+                        width: 100%;
+                        max-width: none; // Remove a limitação da largura
+                        margin-right: 0; // Remove a margem direita do input
+                        margin-bottom: 8px; // Adiciona margem inferior ao input para separar do botão
+                    }
+                    button {
+                        margin-bottom: 0; // Remove a margem inferior do botão
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__content {
+            &__title {
+                font-size: 6vw;
+                white-space: normal; // Permite que o texto quebre em várias linhas
+            }
+
+            &__description {
+                font-size: 3vw;
+            }
+
+            &__form {
+                &__description {
+                    font-size: 3vw;
+                }
+
+                &__contact {
+                    input, button {
+                        font-size: 4vw;
+                        padding: 10px;
+                        width: 100%;
+                        max-width: none; // Remove a limitação da largura
+                    }
+                }
+            }
+        }
+    }
+}
