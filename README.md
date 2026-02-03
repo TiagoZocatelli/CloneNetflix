@@ -1,32 +1,48 @@
-# 🎬 Clone Netflix (Projeto das Aulas)
+# 🎬 Clone Netflix (HTML, CSS e JavaScript)
 
-Um clone da interface da Netflix desenvolvido durante as aulas, com foco em prática de **componentização**, **consumo de dados** e **layout responsivo**.
+Projeto desenvolvido durante aulas para recriar a interface da Netflix utilizando apenas **HTML, CSS e JavaScript puro**, sem frameworks.
 
-🔗 **Deploy:** https://clone-netflix-6j9j.vercel.app/
+🔗 Deploy: https://clone-netflix-6j9j.vercel.app/
+
+---
+
+## 📌 Sobre o projeto
+
+Este projeto reproduz visualmente a página inicial da Netflix com foco em:
+
+- Estruturação de layout
+- Estilização moderna
+- Organização de componentes visuais
+- Responsividade
+- Manipulação de elementos via JavaScript
+
+O objetivo foi praticar fundamentos do desenvolvimento frontend sem utilizar bibliotecas ou frameworks.
 
 ---
 
 ## ✨ Funcionalidades
 
-- Página inicial com layout inspirado na Netflix
-- Listagem de filmes/séries por categorias
-- Seção de destaque (banner/hero)
-- Carrosséis de conteúdo
-- Layout responsivo (mobile / tablet / desktop)
+- Interface inspirada na Netflix
+- Banner principal de destaque
+- Listagem de filmes e séries
+- Seções organizadas por categorias
+- Layout responsivo
+- Interações básicas com JavaScript
 
 ---
 
-## 🖥️ Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
-- **[React]** (ou **Next.js** se for o caso)
-- **CSS / Styled Components** (ajuste conforme seu projeto)
-- **Axios / Fetch** (caso esteja consumindo API)
-- **Vercel** (deploy)
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- Vercel para deploy
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## 🚀 Como rodar localmente
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/[seu-usuario]/[seu-repo].git
+
+```bash
+git clone https://github.com/[seu-usuario]/[repositorio]
